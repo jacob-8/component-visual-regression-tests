@@ -17,21 +17,21 @@ test('increments', async ({ mount, page }) => {
 
 	const increment = component.locator('button:text("+")');
 	const decrement = component.locator('button:text("-")');
-	await expect(component).toContainText('0s');
+	await expect(component).toContainText('0mi');
 	await expect(page).toHaveScreenshot();
 
 	await increment.click();
-	await expect(component).toContainText('1s');
+	await expect(component).toContainText('1mi');
 	expect(changes).toEqual([{ count: 1 }]);
 	await expect(page).toHaveScreenshot();
 
 	await increment.click();
-	await expect(component).toContainText('2s');
+	await expect(component).toContainText('2mi');
 	expect(changes).toEqual([{ count: 1 }, { count: 2 }]);
 	await expect(page).toHaveScreenshot();
 
 	await decrement.click();
-	await expect(component).toContainText('1s');
+	await expect(component).toContainText('1mi');
 	expect(changes).toEqual([{ count: 1 }, { count: 2 }, { count: 1 }]);
 	await expect(page).toHaveScreenshot();
 });
