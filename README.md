@@ -2,6 +2,17 @@
 
 - Automatically run Visual Regression Tests on every commit
 
+## How this was created from the UnoCSS SvelteKit template
+
+- add `playwright/index.html`
+- add `playwright/index.ts`
+- add `playwright-ct.config.ts`
+- run `pnpm i -D @playwright/test @playwright/experimental-ct-svelte`
+- add `"test": "playwright test -c playwright-ct.config.ts",` script to `package.json`
+- add tests as seen in the three `src/lib/_____.spec.ts` files
+- run `pnpm test` or `pnpm test --update-snapshots`
+- add `.github/workflows/components.yml` to run visual regression tests on each commit 
+
 ## Resources to read
 
 - https://playwright.dev/docs/test-components
