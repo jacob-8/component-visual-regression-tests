@@ -1,19 +1,27 @@
 <script lang="ts">
-  let count = 0;
-  function increment() {
-    count += 1;
-  }
-  
-  const orange = (n: number) => `bg-orange-${n}`;
+	import { createEventDispatcher } from "svelte";
+
+	export let units = "";
+
+	let count = 0;
+
+	const dispatch = createEventDispatcher();
+
+	const increment = () => {
+		++count;
+		dispatch("changed", { count });
+	};
+
+	const decrement = () => {
+		--count;
+		dispatch("changed", { count });
+	};
 </script>
 
-<button
-  class="w-250px focus:border-orange-800 {orange(300)} hover:bg-orange-400 color-orange-900 font-semibold rounded-xl p-4"
-  on:click={increment}
->
-  Clicks: {count}<br />
-  <span class="text-sm"
-    >orange background dynamically calculated so bg-orange-300 is in the
-    safelist</span
-  >
-</button>
+<div class="flex font-bold text-5xl space-x-3 p-2 justify-center">
+	<button on:click={decrement}>-</button>
+
+	<div class="text-7xl">{count}{units}</div>
+
+	<button on:click={increment}>+</button>
+</div>
