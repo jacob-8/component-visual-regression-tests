@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/experimental-ct-svelte';
 import Counter from './Counter.svelte';
 
 test('increments', async ({ mount, page }) => {
-	await page.setViewportSize({ width: 200, height: 100 });
+	await page.setViewportSize({ width: 400, height: 100 });
 	
 	const changes: { count:number }[] = [];
 

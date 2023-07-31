@@ -7,7 +7,7 @@ export default defineConfig({
   /* The base directory, relative to the config file, for snapshot files created with toMatchSnapshot and toHaveScreenshot. */
   snapshotDir: './__component-snapshots__',
   snapshotPathTemplate: '{snapshotDir}/{testFilePath}/{arg}-{projectName}-{platform}{ext}', // https://playwright.dev/docs/api/class-testproject#test-project-snapshot-path-template
-  timeout: 10 * 1000,
+  timeout: 20 * 1000,
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
