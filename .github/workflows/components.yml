@@ -8,7 +8,7 @@ on:
 permissions:
   contents: write
   pull-requests: write 
-  
+
 jobs:
   component-visual-regression:
     name: Playwright Component Tests
@@ -32,7 +32,7 @@ jobs:
         run: pnpm install
 
       - name: Run Playwright Component tests
-        run: pnpm test
+        run: pnpm test-update
         env:
           CI: true
 
