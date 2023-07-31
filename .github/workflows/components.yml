@@ -8,7 +8,7 @@ on:
 jobs:
   component-visual-regression:
     name: Playwright Component Tests
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     timeout-minutes: 15
     container:
       image: mcr.microsoft.com/playwright:v1.36.2-jammy #https://playwright.dev/docs/ci#github-actions-via-containers - keep version in sync with installed package
