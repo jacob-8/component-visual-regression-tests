@@ -12,11 +12,4 @@ export default defineConfig({
     }),
     sveltekit(),
   ],
-  test: {
-    include: ['src/**/*.test.ts'],
-    globals: true,
-    environment: 'jsdom',
-    setupFiles: ['./testSetup.ts'],
-    css: true,
-  },
 })
