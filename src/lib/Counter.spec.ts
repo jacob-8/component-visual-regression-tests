@@ -8,7 +8,7 @@ test('increments', async ({ mount, page }) => {
 
 	const component = await mount(Counter, {
 		props: {
-			units: 's'
+			units: 'mi'
 		},
 		on: {
 			changed: (c: { count: number}) => changes.push(c)
