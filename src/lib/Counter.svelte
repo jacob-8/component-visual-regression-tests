@@ -23,5 +23,5 @@
 
 	<div class="text-7xl">{count}{units}</div>
 
-	<button on:click={increment}>+</button>
+	<button on:click={increment}>+ANDY</button>
 </div>
