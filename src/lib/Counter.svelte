@@ -19,9 +19,9 @@
 </script>
 
 <div class="flex font-bold text-5xl space-x-3 p-2 justify-center">
-	<button on:click={decrement}>--</button>
+	<button on:click={decrement}>..</button>
 
 	<div class="text-7xl">{count}{units}</div>
 
-	<button on:click={increment}>++</button>
+	<button on:click={increment}>.</button>
 </div>
