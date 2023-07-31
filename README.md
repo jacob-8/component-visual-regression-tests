@@ -12,6 +12,7 @@
 - add tests as seen in the three `src/lib/_____.spec.ts` files
 - run `pnpm test` or `pnpm test --update-snapshots`
 - add `.github/workflows/components.yml` to run visual regression tests on each commit 
+- `git config --global --add safe.directory /__w/component-visual-regression-tests/component-visual-regression-tests`
 
 ## Resources to read
 
